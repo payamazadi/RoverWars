@@ -1,0 +1,13 @@
+{
+  "name": "PayamTesting",
+  "version": "0.0.0",
+  "description": "Examples in preparation for ufora interview",
+  "main": "main.js",
+  "repository": "",
+  "author": "Payam Azadi <payamazadi@live.com>",
+  "dependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.4",
+    "socket.io": "^1.3.5"
+  }
+}

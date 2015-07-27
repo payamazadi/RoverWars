@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO Rovers</title>
+  </head>
+  <body>
+    
+    <button onclick="sendMove();">Move</button>
+    <button onclick="sendLeft();">Left</button>
+    <button onclick="sendRight();">Right</button>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+        socket.on('placement', function (data) {
+            console.log(data.toString());
+        });
+        
+        socket.on('move', function (data) {
+          console.log(data.toString());
+        });
+        
+        socket.on('turn', function (data) {
+          console.log(data.toString());
+        });
+        
+        
+        function sendMove(){
+            socket.emit('move', 'move');
+        }
+        
+        function sendLeft(){
+          socket.emit('left', 'move');
+        }
+        
+        function sendRight(){
+          socket.emit('right', 'right');
+        }
+    </script>
+  </body>
+</html>
